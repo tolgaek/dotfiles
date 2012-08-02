@@ -1,0 +1,100 @@
+,V
+set runtimepath+=~/.vim_runtimesource ~/.vim_runtime/vimrcs/basic.vimsource ~/.vim_runtime/vimrcs/filetypes.vimsource ~/.vim_runtime/vimrcs/plugins_config.vimsource ~/.vim_runtime/vimrcs/extended.vimtrysource ~/.vim_runtime/vimrcs/my_configs.vimcatchendtry,V
+" Make Vim more usefulset nocompatible" Use the OS clipboard by default (on versions compiled with `+clipboard`)set clipboard=unnamed" Enhance command-line completionset wildmenu" Allow cursor keys in insert modeset esckeys" Allow backspace in insert modeset backspace=indent,eol,start" Optimize for fast terminal connectionsset ttyfast" Add the g flag to search/replace by defaultset gdefault" Use UTF-8 without BOMset encoding=utf-8 nobomb" Change mapleaderlet mapleader=","" Don’t add empty newlines at the end of filesset binaryset noeol" Centralize backups, swapfiles and undo historyset backupdir=~/.vim/backupsset directory=~/.vim/swapsif exists("&undodir")	set undodir=~/.vim/undoendif" Respect modeline in filesset modelineset modelines=4" Enable per-directory .vimrc files and disable unsafe commands in themset exrcset secure" Enable line numbersset number" Enable syntax highlightingsyntax on" Highlight current lineset cursorline" Make tabs as wide as two spacesset tabstop=2" Show “invisible” charactersset lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_set list" Highlight searchesset hlsearch" Ignore case of searchesset ignorecase" Highlight dynamically as pattern is typedset incsearch" Always show status lineset laststatus=2" Enable mouse in all modesset mouse=a" Disable error bellsset noerrorbells" Don’t reset cursor to start of line when moving around.set nostartofline" Show the cursor positionset ruler" Don’t show the intro message when starting Vimset shortmess=atI" Show the current modeset showmode" Show the filename in the window titlebarset title" Show the (partial) command as it’s being typedset showcmd" Use relative line numbersif exists("&relativenumber")	set relativenumber	au BufReadPost * set relativenumberendif" Start scrolling three lines before the horizontal window borderset scrolloff=3" Strip trailing whitespace (,ss)function! StripWhitespace()	let save_cursor = getpos(".")	let old_query = getreg('/')	:%s/\s\+$//e	call setpos('.', save_cursor)	call setreg('/', old_query)endfunctionnoremap <leader>ss :call StripWhitespace()<CR>" Save a file as root (,W)noremap <leader>W :w !sudo tee % > /dev/null<CR>" Automatic commandsif has("autocmd")	" Enable file type detection	filetype on	" Treat .json files as .js	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascriptendif,V
+",V
+set guifont=Monaco:h12,V
+[difftool "sourcetree"]	cmd = opendiff \"$LOCAL\" \"$REMOTE\"	path = [mergetool "sourcetree"]	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"	trustExitCode = true,V
+    l          = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --tags --remotes -n15    lf         = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all --full-history -n15    ff         = merge --ff-only     reflogtree = "!git lf `git reflog | cut -c1-7`",V
+[user]	name = Tolga Ekmen	email = tolga.ekmen@enflick.com,V
+#ls Color schemeexport LSCOLORS="FxGxBxDxCxFgFdxbxgxcxd",V
+GIT_PS1_SHOWUPSTREAM="auto",V
+GIT_PS1_SHOWSTASHSTATE=1,V
+GIT_PS1_SHOWDIRTYSTATE=1,V
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ ',V
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ 'GIT_PS1_SHOWDIRTYSTATE=1GIT_PS1_SHOWSTASHSTATE=1GIT_PS1_SHOWUPSTREAM="auto",V
+# Tasty git morsels!!!!! :Dsource ~/.bin/git-completion.shPS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ 'GIT_PS1_SHOWDIRTYSTATE=1GIT_PS1_SHOWSTASHSTATE=1GIT_PS1_SHOWUPSTREAM="auto",V
+set -o vieval "$(rbenv init -)",V
+export PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/tools:$PATHexport PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/platform-tools:$PATHexport PATH=/usr/local/bin:$PATHexport PATH=/usr/local/sbin:$PATH,V
+alias oo="open .",V
+export PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/tools:$PATHexport PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/platform-tools:$PATHexport PATH=/usr/local/bin:$PATHexport PATH=/usr/local/sbin:$PATH,V
+alias o="open",V
+alias s="subl .",V
+alias m="mate .",V
+alias v="vim",V
+alias j="jobs",V
+alias h="history",V
+alias g="git",V
+alias p="cd ~/Projects",V
+export LSCOLORS="HxGxBxDxCxHgHdxbxgxcxd",V
+alias cl='clear'# Tasty git morsels!!!!! :Dsource ~/.bin/git-completion.shPS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ 'GIT_PS1_SHOWDIRTYSTATE=1GIT_PS1_SHOWSTASHSTATE=1GIT_PS1_SHOWUPSTREAM="auto",V
+export PATH=/usr/local/sbin:$PATH,V
+export PATH=/usr/local/bin:$PATH,V
+export PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/platform-tools:$PATH,V
+export PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/tools:$PATH,V
+export PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/tools:$PATHexport PATH=/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/platform-tools:$PATHexport PATH=/usr/local/bin:$PATHexport PATH=/usr/local/sbin:$PATHset -o vieval "$(rbenv init -)"alias cl='clear'# Tasty git morsels!!!!! :Dsource ~/.bin/git-completion.shPS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ 'GIT_PS1_SHOWDIRTYSTATE=1GIT_PS1_SHOWSTASHSTATE=1GIT_PS1_SHOWUPSTREAM="auto",V
+t,v
+export LSCOLORS="HxGxBxDxCxHgHdxbxgxcxd",v
+e,v
+APA91bFVEsEbXwgVzybASIw2pdNCcmsjwLtn-4sGjp-TA0KdVfeHGvGY3LZ26H7xDGaOyeNYGf7lvT6G5WMESBHE2GBidaOpvrFa1r8On5bn2TmFSHPSx1-UOhFU9_uMs8fl4iDHTZ8ReI9S29PqQinvZywYnJFy8Q',v
+## This is the Apache server configuration file providing SSL support.# It contains the configuration directives to instruct the server how to# serve pages over an https connection. For detailing information about these # directives see <URL:http://httpd.apache.org/docs/2.2/mod/mod_ssl.html># # Do NOT simply read the instructions in here without understanding# what they do.  They're here only as hints or reminders.  If you are unsure# consult the online docs. You have been warned.  #LoadModule ssl_module modules/mod_ssl.so## When we also provide SSL we have to listen to the # the HTTPS port in addition.#Listen 443####  SSL Global Context####  All SSL configuration in this context applies both to##  the main server and all SSL-enabled virtual hosts.###   Pass Phrase Dialog:#   Configure the pass phrase gathering process.#   The filtering dialog program (`builtin' is a internal#   terminal dialog) has to provide the pass phrase on stdout.SSLPassPhraseDialog  builtin#   Inter-Process Session Cache:#   Configure the SSL Session Cache: First the mechanism #   to use and second the expiring timeout (in seconds).#SSLSessionCache        dc:UNIX:/var/cache/mod_ssl/distcacheSSLSessionCache         shmcb:/var/cache/mod_ssl/scache(512000)SSLSessionCacheTimeout  300#   Semaphore:#   Configure the path to the mutual exclusion semaphore the#   SSL engine uses internally for inter-process synchronization. SSLMutex default#   Pseudo Random Number Generator (PRNG):#   Configure one or more sources to seed the PRNG of the #   SSL library. The seed data should be of good random quality.#   WARNING! On some platforms /dev/random blocks if not enough entropy#   is available. This means you then cannot use the /dev/random device#   because it would lead to very long connection times (as long as#   it requires to make more entropy available). But usually those#   platforms additionally provide a /dev/urandom device which doesn't#   block. So, if available, use this one instead. Read the mod_ssl User#   Manual for more details.SSLRandomSeed startup file:/dev/urandom  256SSLRandomSeed connect builtin#SSLRandomSeed startup file:/dev/random  512#SSLRandomSeed connect file:/dev/random  512#SSLRandomSeed connect file:/dev/urandom 512## Use "SSLCryptoDevice" to enable any supported hardware# accelerators. Use "openssl engine -v" to list supported# engine names.  NOTE: If you enable an accelerator and the# server does not start, consult the error logs and ensure# your accelerator is functioning properly. #SSLCryptoDevice builtin#SSLCryptoDevice ubsec#### SSL Virtual Host Context##<VirtualHost _default_:443># General setup for the virtual host, inherited from global configuration#DocumentRoot "/var/www/html"#ServerName www.example.com:443# Use separate log files for the SSL virtual host; note that LogLevel# is not inherited from httpd.conf.ErrorLog logs/ssl_error_logTransferLog logs/ssl_access_logLogLevel warn#   SSL Engine Switch:#   Enable/Disable SSL for this virtual host.SSLEngine on#   SSL Protocol support:# List the enable protocol levels with which clients will be able to# connect.  Disable SSLv2 access by default:SSLProtocol all -SSLv2#   SSL Cipher Suite:# List the ciphers that the client is permitted to negotiate.# See the mod_ssl documentation for a complete list.SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW#   Server Certificate:# Point SSLCertificateFile at a PEM encoded certificate.  If# the certificate is encrypted, then you will be prompted for a# pass phrase.  Note that a kill -HUP will prompt again.  A new# certificate can be generated using the genkey(1) command.SSLCertificateFile /etc/pki/tls/certs/enflick.com.crt#   Server Private Key:#   If the key is not combined with the certificate, use this#   directive to point at the key file.  Keep in mind that if#   you've both a RSA and a DSA private key you can configure#   both in parallel (to also allow the use of DSA ciphers, etc.)SSLCertificateKeyFile /etc/pki/tls/private/enflickcom.key#   Server Certificate Chain:#   Point SSLCertificateChainFile at a file containing the#   concatenation of PEM encoded CA certificates which form the#   certificate chain for the server certificate. Alternatively#   the referenced file can be the same as SSLCertificateFile#   when the CA certificates are directly appended to the server#   certificate for convinience.SSLCertificateChainFile /etc/pki/tls/certs/gd_bundle.crt#   Certificate Authority (CA):#   Set the CA certificate verification path where to find CA#   certificates for client authentication or alternatively one#   huge file containing all of them (file must be PEM encoded)#SSLCACertificateFile /etc/pki/tls/certs/localhost.crt#   Client Authentication (Type):#   Client certificate verification type and depth.  Types are#   none, optional, require and optional_no_ca.  Depth is a#   number which specifies how deeply to verify the certificate#   issuer chain before deciding the certificate is not valid.#SSLVerifyClient require#SSLVerifyDepth  10#   Access Control:#   With SSLRequire you can do per-directory access control based#   on arbitrary complex boolean expressions containing server#   variable checks and other lookup directives.  The syntax is a#   mixture between C and Perl.  See the mod_ssl documentation#   for more details.#<Location />#SSLRequire (    %{SSL_CIPHER} !~ m/^(EXP|NULL)/ \#            and %{SSL_CLIENT_S_DN_O} eq "Snake Oil, Ltd." \#            and %{SSL_CLIENT_S_DN_OU} in {"Staff", "CA", "Dev"} \#            and %{TIME_WDAY} >= 1 and %{TIME_WDAY} <= 5 \#            and %{TIME_HOUR} >= 8 and %{TIME_HOUR} <= 20       ) \#           or %{REMOTE_ADDR} =~ m/^192\.76\.162\.[0-9]+$/#</Location>#   SSL Engine Options:#   Set various options for the SSL engine.#   o FakeBasicAuth:#     Translate the client X.509 into a Basic Authorisation.  This means that#     the standard Auth/DBMAuth methods can be used for access control.  The#     user name is the `one line' version of the client's X.509 certificate.#     Note that no password is obtained from the user. Every entry in the user#     file needs this password: `xxj31ZMTZzkVA'.#   o ExportCertData:#     This exports two additional environment variables: SSL_CLIENT_CERT and#     SSL_SERVER_CERT. These contain the PEM-encoded certificates of the#     server (always existing) and the client (only existing when client#     authentication is used). This can be used to import the certificates#     into CGI scripts.#   o StdEnvVars:#     This exports the standard SSL/TLS related `SSL_*' environment variables.#     Per default this exportation is switched off for performance reasons,#     because the extraction step is an expensive operation and is usually#     useless for serving static content. So one usually enables the#     exportation for CGI and SSI requests only.#   o StrictRequire:#     This denies access when "SSLRequireSSL" or "SSLRequire" applied even#     under a "Satisfy any" situation, i.e. when it applies access is denied#     and no other module can change it.#   o OptRenegotiate:#     This enables optimized SSL connection renegotiation handling when SSL#     directives are used in per-directory context. #SSLOptions +FakeBasicAuth +ExportCertData +StrictRequire<Files ~ "\.(cgi|shtml|phtml|php3?)$">    SSLOptions +StdEnvVars</Files><Directory "/var/www/cgi-bin">    SSLOptions +StdEnvVars</Directory>#   SSL Protocol Adjustments:#   The safe and default but still SSL/TLS standard compliant shutdown#   approach is that mod_ssl sends the close notify alert but doesn't wait for#   the close notify alert from client. When you need a different shutdown#   approach you can use one of the following variables:#   o ssl-unclean-shutdown:#     This forces an unclean shutdown when the connection is closed, i.e. no#     SSL close notify alert is send or allowed to received.  This violates#     the SSL/TLS standard but is needed for some brain-dead browsers. Use#     this when you receive I/O errors because of the standard approach where#     mod_ssl sends the close notify alert.#   o ssl-accurate-shutdown:#     This forces an accurate shutdown when the connection is closed, i.e. a#     SSL close notify alert is send and mod_ssl waits for the close notify#     alert of the client. This is 100% SSL/TLS standard compliant, but in#     practice often causes hanging connections with brain-dead browsers. Use#     this only for browsers where you know that their SSL implementation#     works correctly. #   Notice: Most problems of broken clients are also related to the HTTP#   keep-alive facility, so you usually additionally want to disable#   keep-alive for those clients, too. Use variable "nokeepalive" for this.#   Similarly, one has to force some clients to use HTTP/1.0 to workaround#   their broken HTTP/1.1 implementation. Use variables "downgrade-1.0" and#   "force-response-1.0" for this.SetEnvIf User-Agent ".*MSIE.*" \         nokeepalive ssl-unclean-shutdown \         downgrade-1.0 force-response-1.0#   Per-Server Logging:#   The home of a custom SSL log file. Use this when you want a#   compact non-error SSL logfile on a virtual host basis.CustomLog logs/ssl_request_log \          "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"</VirtualHost>          ,V
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDApX+a7lIU2dSkZG3VVU9E/2gfe256tbx8jVB5JgKnN1+ZUxUD7DyJXTEm7/ySzXAMu5dMfJtL85omscCS3EBSMEXGOiNcxvUEgtk9BZMzKe0L3aGCehSB+jBVCd9lrtazETwp0H2XLeGpx9kh6ZZjxUwBuMt5vBWbUKfiwM55FI6ybRYaIQLwinRNb+G8+vDURnoDzwKu+bk5+hm1VIXjF0fvTe31Ob2FwaVXArQkdbETpuM2q2tYdSfwao2I1FSp4R37V6rN15t11KA8XtNULfRT+gu1o6qYIAdgrtGxnJE5txVYTAAYKDqWMRpUH0bt754XYzZ0A5wE36UyQpTV tolga@localhost,v
+$devices = array('APA91bFVEsEbXwgVzybASIw2pdNCcmsjwLtn-4sGjp-TA0KdVfeHGvGY3LZ26H7xDGaOyeNYGf7lvT6G5WMESBHE2GBidaOpvrFa1r8On5bn2TmFSHPSx1-UOhFU9_uMs8fl4iDHTZ8ReI9S29PqQinvZywYnJFy8Q');,V
+Hello,Me and my friend are looking for a place to rent in toronto. We are both males in our mid 20s (25 and 24) and we are computer science students at Ryerson students currently working in Waterloo on our co-op jobs. We are coming to Toronto on sunday to view some rooms. Can we come see it sometime after 1pm or so? We are both clean, respectful and nonsmokers.I can be reached at 226 792 0111Thanks,Tolga,v
+var video = document.querySelector('.webcamStream');        //var button = document.querySelector('#capture-button');        var localMediaStream = null;        var canvas = document.querySelector('.snapshotCanvas');        var ctx = canvas.getContext('2d');        var img = document.querySelector('.snapshot');,v
+        webcamButtons : SC.View.extend({            layout : {                top : 340,                centerX : 0            },            childViews : ['captureButton'],,v
+http://textnow-web.localhost/,v
+Uncaught TypeError: Cannot call method 'design' of undefined ,v
+ alert("test");,v
+George Ken-nan, for example, has called the VersaillesTreatya "verysilly humiliatingand punitive peace imposed on Germany after World War I.",v
+Great Depression,V
+    c,V
+WW2 Causes Information & Activity Worksheets,v
+    let success = (line(".") == a:line && col(".") == a:col),V
+    call cursor(a:line, a:col),V
+    let l = line("."),V
+let l = line(".")    call cursor(a:line, a:col)    let success = (line(".") == a:line && col(".") == a:col)    c,v
+The Germany’s preparedness was definitely a major factor that contributed to its early success. The reason they were so prepared was because of the desperate situation that Germany found itself after the Treaty of Versailles and the 30’s depression. In this situation, the German population was easily swayed to the idea that the only way to get back to their old form was through the use of weapons. Along with that another factor along with Britain’s appeasement policy was United States isolationism policy I think. If US was to get involved and tried to stop Germany early on, I doubt even their preparedness would help them be successful.,v
+HER-969P-TMPK-PJBM-B4PM,v
+//////,2
+u,v
+Hashtable ,v
+ashtable ,v
+ = new Hashtable();,v
+p,v
+    		taskCompleted(true);,V
+//////////,2
+protected void completeTask(){        if(mListener != null){            mListener.onTaskCompleted();        }	},v
+= line(".")    call cursor(a:line, a:col)    let success = (line(".") == a:line && col(".") == a:col)    call cu,v
+	protected void completeTask(){        if(mListener != null){            mListener.onTaskCompleted();        }	},V
+	protected void completeTask(){        if(mListener != null){            mListener.onTaskCompleted();        }	,v
+    },V
+git://github.com/scrooloose/nerdcommenter.git,v
+        reportMultipleProgress(progressBy);    ,V
+    public void subtaskProgressed(int taskId, int progressBy){,V
+        ,V
+        mListener.onTaskCompleted();,V
+    public void completeTask(){,V
+    @Override,V
+        public void subtaskProgressed(int taskId, int progressBy){,V
+            },V
+    	},V
+    		taskCompleted(false);,V
+    	else {,V
+    	} ,V
+    		executeNextTask();,V
+        if(t.isSuccessful()){,V
+        mTaskData = t.getTaskData();,V
+   */,V
+         },V
+         	mListener.postProcess();,V
+    	 if (mListener != null){,V
+    public void runPostProcess(){,V
+    /* ,V
+   ,V
+    protected void reportMultipleProgress(int progressBy){,V
+    ,V
+        reportMultipleProgress(1);,V
+    protected void reportProgress(){,V
+    public void cancel();,V
+    public void stop();,V
+    public void getReturnData();,V
