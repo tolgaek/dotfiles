@@ -37,3 +37,6 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+# If possible, add tab completion for git
+[ -f $HOME/.bin/git-completion.sh ] && source $HOME/.bin/git-completion.sh
