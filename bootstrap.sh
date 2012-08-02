@@ -2,15 +2,15 @@
 cd "$(dirname "$0")"
 git pull
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-EXCLUDED=( "." ".." ".brew" ".git" ".DS_Store" "bootstrap.sh" "README.md" "init" ".osx" )
+EXCLUDED=( ".brew" ".git" ".DS_Store" "bootstrap.sh" "README.md" "init" ".osx" )
 
 function createLinks() {
-    for file in `ls -a $DIR/`
+    for file in `ls -A $DIR/`
     do
         if (! isExcluded $file)
         then
-            echo $file
-            #ln -fs $DIR/$file $HOME/$file
+            ln -fs $DIR/$file $HOME/$file
+            echo "Symlink created for $file"
         fi
     done
 }
