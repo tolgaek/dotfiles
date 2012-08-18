@@ -5,6 +5,9 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+#rbev settings
+eval "$(rbenv init -)"
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
