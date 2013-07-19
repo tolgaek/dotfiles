@@ -6,7 +6,7 @@ done
 unset file
 
 #rbev settings
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
