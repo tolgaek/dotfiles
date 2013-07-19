@@ -7,10 +7,16 @@ EXCLUDED=( ".brew" ".git" ".DS_Store" "bootstrap.sh" "README.md" "init" ".osx" )
 function createLinks() {
     for file in `ls -A $DIR/`
     do
+        echo $file
         if (! isExcluded $file)
         then
-            ln -fs $DIR/$file $HOME/$file
-            echo "Symlink created for $file"
+            if [ -d "$file" ] ; then
+                ln -fs $DIR/$file $HOME
+                echo "Directory symlink created for $file"
+            else
+                ln -fs $DIR/$file $HOME/$file
+                echo "Symlink created for $file"
+            fi
         fi
     done
 }
