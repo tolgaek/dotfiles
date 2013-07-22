@@ -17,7 +17,6 @@ Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'myhere/vim-nodejs-complete'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'Lokaltog/powerline'
 
 filetype plugin indent on
 
