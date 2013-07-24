@@ -17,6 +17,7 @@ Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'myhere/vim-nodejs-complete'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
 
@@ -31,3 +32,14 @@ set shiftwidth=4
 
 set nobackup
 set noswapfile
+
+"Enable mouse
+set mouse=a
+
+"This is for the GNOME terminal in order to change the cursor shape when in
+"insert mode
+if has("autocmd")
+    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape ibeam"
+    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
+    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
+endif
