@@ -36,6 +36,9 @@ set noswapfile
 "Enable mouse
 set mouse=a
 
+"Set case insensitive
+set ignorecase
+
 "This is for the GNOME terminal in order to change the cursor shape when in
 "insert mode
 if has("autocmd")
