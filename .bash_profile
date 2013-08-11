@@ -43,3 +43,5 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # If possible, add tab completion for git
 [ -f $HOME/.bin/git-completion.sh ] && source $HOME/.bin/git-completion.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

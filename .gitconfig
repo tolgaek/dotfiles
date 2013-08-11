@@ -100,3 +100,9 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 980x706+1985+24
+	main-window-view = FileView
+	history-view-vpane-position = 781
+	file-view-vpane-position = 531

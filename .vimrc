@@ -39,6 +39,8 @@ set mouse=a
 "Set case insensitive
 set ignorecase
 
+set foldlevelstart=20
+
 "This is for the GNOME terminal in order to change the cursor shape when in
 "insert mode
 if has("autocmd")
@@ -46,3 +48,5 @@ if has("autocmd")
     au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
     au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
 endif
+
+au FileType javascript call JavaScriptFold()
