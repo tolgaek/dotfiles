@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'myhere/vim-nodejs-complete'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-surround'
+Bundle 'Shutnik/jshint2.vim'
 
 filetype plugin indent on
 

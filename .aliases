@@ -123,9 +123,13 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 #done
 
 # Onchange sh script for syncronizing
+#
+sync() { onchange.sh rsync -rtvz --delete --exclude ".git" ~/magnet/midnight-server/ tolga.ekmen@midnight:$1 ;}
+
+alias sshmidnight="ssh tolga.ekmen@midnight"
+
 alias synctolga="onchange.sh rsync -rtvz --delete --exclude '.git' ~/magnet/midnight-server/ tolga.ekmen@midnight:/home/tolga.ekmen/tolga"
 
+alias synctest="onchange.sh rsync -rtvz --delete --exclude '.git' ~/magnet/midnight-server/ tolga.ekmen@midnight:/home/tolga.ekmen/test"
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 #alias stfu="osascript -e 'set volume output muted true'"
-#alias pumpitup="osascript -e 'set volume 7'"
-#alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
