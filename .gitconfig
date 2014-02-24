@@ -1,6 +1,6 @@
 [user]
-	name = tolgaek
-	email = tolga.ekmen@gmail.com
+	name = Tolga Ekmen
+	email = tolga.ekmen@magnetforensics.com
 [alias]
     lf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all --full-history
 	# View the SHA, description, and history graph of the latest 20 commits

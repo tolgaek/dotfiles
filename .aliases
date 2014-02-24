@@ -16,8 +16,7 @@ alias -- -="cd -"
 #alias m="mate ."
 #alias s="subl ."
 #alias o="open"
-#alias oo="open ."
-
+#alias oo="open ." 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -128,7 +127,10 @@ sync() { onchange.sh rsync -rtvz --delete --exclude ".git" ~/magnet/midnight-ser
 
 alias sshmidnight="ssh tolga.ekmen@midnight"
 
-alias synctolga="onchange.sh rsync -rtvz --delete --exclude '.git' ~/magnet/midnight-server/ tolga.ekmen@midnight:/home/tolga.ekmen/tolga"
+alias synctolga="onchange.sh rsync -rtvz --exclude '.git' ~/magnet/midnight-server/ tolga.ekmen@midnight:/home/tolga.ekmen/tolga"
+
+alias syncawsserver="rsync -rtvz --exclude 'certificates' --exclude '.git' ~/magnet/midnight-server/ tolga@174.129.210.68:/home/tolga/server"
+alias sshawsserver="ssh midnightserver"
 
 alias synctest="onchange.sh rsync -rtvz --delete --exclude '.git' ~/magnet/midnight-server/ tolga.ekmen@midnight:/home/tolga.ekmen/test"
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
