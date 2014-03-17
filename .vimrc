@@ -19,6 +19,7 @@ Bundle 'myhere/vim-nodejs-complete'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-surround'
 Bundle 'Shutnik/jshint2.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
@@ -42,12 +43,5 @@ set ignorecase
 
 set foldlevelstart=20
 
-"This is for the GNOME terminal in order to change the cursor shape when in
-"insert mode
-if has("autocmd")
-    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape ibeam"
-    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
-    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
-endif
-
 au FileType javascript call JavaScriptFold()
+filetype plugin indent on

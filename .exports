@@ -20,5 +20,5 @@ export PATH=/usr/local/sbin:$PATH
 
 #set -o vi
 #eval "$(rbenv init -)"
-
-
+export PATH=/usr/local/arcanist/bin:$PATH
+xport PATH=/usr/local/mysql/bin:$PATH

@@ -43,5 +43,8 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # If possible, add tab completion for git
 [ -f $HOME/.bin/git-completion.sh ] && source $HOME/.bin/git-completion.sh
+source /usr/local/arcanist/resources/shell/bash-completion
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+      . `brew --prefix`/etc/bash_completion
+fi
