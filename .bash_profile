@@ -5,9 +5,6 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-#rbev settings
-#eval "$(rbenv init -)"
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -48,3 +45,6 @@ source /usr/local/arcanist/resources/shell/bash-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
       . `brew --prefix`/etc/bash_completion
 fi
+
+#Fink 
+source /sw/bin/init.sh

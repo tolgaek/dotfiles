@@ -26,7 +26,8 @@ filetype plugin indent on
 "Configurations
 syntax enable
 set background=dark
-colorscheme darkblue
+"let g:solarized_termcolors=256
+colorscheme solarized
 
 set expandtab
 set tabstop=2
@@ -45,3 +46,7 @@ set foldlevelstart=20
 
 au FileType javascript call JavaScriptFold()
 filetype plugin indent on
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
