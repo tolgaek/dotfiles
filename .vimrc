@@ -6,21 +6,22 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles
-Bundle 'scrooloose/syntastic'
-Bundle 'einars/js-beautify'
-Bundle 'Chiel92/vim-autoformat'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'wincent/Command-T'
-Bundle 'scrooloose/nerdtree'
-Bundle 'myhere/vim-nodejs-complete'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'tpope/vim-surround'
-Bundle 'Shutnik/jshint2.vim'
-Bundle 'kchmck/vim-coffee-script'
+" My Plugins
+Plugin 'scrooloose/syntastic'
+Plugin 'einars/js-beautify'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'wincent/Command-T'
+Plugin 'scrooloose/nerdtree'
+Plugin 'myhere/vim-nodejs-complete'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'tpope/vim-surround'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'kchmck/vim-coffee-script'
 
+call vundle#end()
 filetype plugin indent on
 
 "Configurations

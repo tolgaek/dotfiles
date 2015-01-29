@@ -106,3 +106,5 @@
 	main-window-view = FileView
 	history-view-vpane-position = 781
 	file-view-vpane-position = 531
+[push]
+	default = simple

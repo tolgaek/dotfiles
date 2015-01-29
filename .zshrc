@@ -48,7 +48,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man colorize command-not-found copydir copyfile history tmuxinator vundle fasd jump ant coffee cake go mvn npm nvm brew forklift textmate)
+plugins=(common-aliases rails rake git colored-man colorize command-not-found copydir copyfile history tmuxinator vundle fasd jump ant coffee cake go mvn npm nvm brew forklift textmate)
 
 source $ZSH/oh-my-zsh.sh
 
