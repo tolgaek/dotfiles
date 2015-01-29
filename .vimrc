@@ -1,8 +1,8 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
@@ -46,7 +46,3 @@ set foldlevelstart=20
 
 au FileType javascript call JavaScriptFold()
 filetype plugin indent on
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
