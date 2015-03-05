@@ -60,7 +60,7 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
     defaultToUpstream = true
-    tool = opendiff
+    tool = diffmerge
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
 	remote = origin
@@ -108,3 +108,7 @@
 	file-view-vpane-position = 531
 [push]
 	default = simple
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
