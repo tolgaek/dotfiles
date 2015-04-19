@@ -55,7 +55,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 DEFAULT_USER="tekmen"
 
-export PATH="/sw/bin:/sw/sbin:/usr/local/arcanist/bin:/usr/local/bin/axonify:/usr/local/sbin:/usr/local/bin:/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/platform-tools:/Users/tolga/Desktop/DevTools/android-sdk-mac_x86/tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin/axonify:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
+export PATH="$PATH:/sw/bin:/sw/sbin:/usr/local/arcanist/bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

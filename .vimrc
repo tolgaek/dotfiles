@@ -1,5 +1,7 @@
+set shell=sh
 set nocompatible               " be iMproved
 filetype off                   " required!
+set autoread
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,6 +27,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'lucapette/vim-ruby-doc'
 Plugin 'mileszs/ack.vim'
 Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'heartsentwined/vim-emblem'
 
 call vundle#end()
 filetype plugin indent on
@@ -56,12 +61,12 @@ filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
 
-let g:syntastic_scss_checkers = ['sassc']
+let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_js_checkers = ['jshint']
-let g:syntastic_rb_checkers = ['rubocop']
+let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_coffee_checkers = ['coffee']
 
 let g:airline_powerline_fonts = 1
