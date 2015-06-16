@@ -58,7 +58,6 @@ set ignorecase
 set foldlevelstart=20
 set number
 
-au FileType javascript call JavaScriptFold()
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
