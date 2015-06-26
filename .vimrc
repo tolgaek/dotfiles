@@ -1,4 +1,5 @@
 set shell=sh
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 set autoread
@@ -30,6 +31,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'heartsentwined/vim-emblem'
+Plugin 'gcmt/taboo.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -56,6 +58,8 @@ set ignorecase
 set foldlevelstart=20
 set number
 
+set sessionoptions+=tabpages,globals
+
 au FileType javascript call JavaScriptFold()
 filetype plugin indent on
 
@@ -66,7 +70,10 @@ let g:syntastic_check_on_wq = 1
 
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_js_checkers = ['jshint']
-let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_coffee_checkers = ['coffee']
 
 let g:airline_powerline_fonts = 1
+
+let g:taboo_renamed_tab_format=" [%l]%f%m "
+i
