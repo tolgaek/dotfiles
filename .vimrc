@@ -19,7 +19,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'wincent/Command-T'
 Plugin 'scrooloose/nerdtree'
 Plugin 'myhere/vim-nodejs-complete'
-Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'tpope/vim-surround'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -32,6 +32,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'gcmt/taboo.vim'
+Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
@@ -60,11 +62,10 @@ set number
 
 set sessionoptions+=tabpages,globals
 
-au FileType javascript call JavaScriptFold()
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
