@@ -55,7 +55,7 @@ set noswapfile
 set mouse=a
 
 "Set case insensitive
-set ignorecase
+set smartcase
 
 set foldlevelstart=20
 set number
