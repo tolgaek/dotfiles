@@ -34,6 +34,7 @@ Plugin 'heartsentwined/vim-emblem'
 Plugin 'gcmt/taboo.vim'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
+Plugin 'digitaltoad/vim-jade'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,7 +56,7 @@ set noswapfile
 set mouse=a
 
 "Set case insensitive
-set smartcase
+set ignorecase
 
 set foldlevelstart=20
 set number
