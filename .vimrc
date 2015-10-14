@@ -9,7 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
 Plugin 'scrooloose/syntastic'
@@ -19,9 +19,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'wincent/Command-T'
 Plugin 'scrooloose/nerdtree'
 Plugin 'myhere/vim-nodejs-complete'
-"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'tpope/vim-surround'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
@@ -71,7 +69,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_js_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_coffee_checkers = ['coffee']
 
