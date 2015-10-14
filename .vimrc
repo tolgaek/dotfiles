@@ -76,4 +76,5 @@ let g:syntastic_coffee_checkers = ['coffee']
 let g:airline_powerline_fonts = 1
 
 let g:taboo_renamed_tab_format=" [%l]%f%m "
-i
+
+map <C-n> :NERDTreeToggle<CR>
