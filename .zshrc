@@ -55,10 +55,10 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 DEFAULT_USER="tekmen"
 
+export PATH="$HOME/.node/bin:$PATH"
 export PATH="$PATH:/sw/bin:/sw/sbin:/usr/local/arcanist/bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export PATH="$HOME/.node/bin:$PATH"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
