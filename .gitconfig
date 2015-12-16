@@ -112,5 +112,7 @@
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
-[heroku]
-	account = work
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = diffmerge
