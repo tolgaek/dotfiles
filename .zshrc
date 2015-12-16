@@ -55,6 +55,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 DEFAULT_USER="tekmen"
 
+export PATH="$HOME/.node/bin:$PATH"
 export PATH="$PATH:/sw/bin:/sw/sbin:/usr/local/arcanist/bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -80,3 +81,5 @@ export KEYTIMEOUT=1
 ulimit -n 8192
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export MONGO_PATH=/usr/local/mongodb
+export PATH=$PATH:$MONGO_PATH/bin
