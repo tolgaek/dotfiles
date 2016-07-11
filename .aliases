@@ -16,7 +16,7 @@ alias -- -="cd -"
 #alias m="mate ."
 #alias s="subl ."
 #alias o="open"
-#alias oo="open ." 
+#alias oo="open ."
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -98,4 +98,4 @@ alias flush="dscacheutil -flushcache"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-alias herokudb="heroku pg:psql --app bidvine-beta HEROKU_POSTGRESQL_COPPER"
+alias startmuz="supervisor --debug server.js | bunyan"
