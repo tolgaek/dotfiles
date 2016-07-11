@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
@@ -32,6 +32,7 @@ Plugin 'heartsentwined/vim-emblem'
 Plugin 'gcmt/taboo.vim'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
 
 call vundle#end()
@@ -69,6 +70,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 let g:syntastic_scss_checkers = ['scss_lint']
+"let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_coffee_checkers = ['coffee']
@@ -78,3 +80,16 @@ let g:airline_powerline_fonts = 1
 let g:taboo_renamed_tab_format=" [%l]%f%m "
 
 map <C-n> :NERDTreeToggle<CR>
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
+" Trigger trialing space on write
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
