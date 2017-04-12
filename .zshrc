@@ -53,8 +53,11 @@ plugins=(vagrant common-aliases rails rake git colored-man colorize command-not-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-DEFAULT_USER="tekmen"
+DEFAULT_USER="tekm"
 
+export MAVEN_HOME="/Users/tekm/projects/apache-maven-3.3.9"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home"
+export PATH="$PATH:$MAVEN_HOME/bin"
 export PATH="$HOME/.node/bin:$PATH"
 export PATH="$PATH:/sw/bin:/sw/sbin:/usr/local/arcanist/bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -86,3 +89,6 @@ export PATH=$PATH:$MONGO_PATH/bin
 
 export NVM_DIR="/Users/tekmen/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# YARN
+#export PATH="$PATH:`yarn global bin`"

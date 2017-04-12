@@ -33,7 +33,7 @@
 
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = /Users/tolga/.gitignore
+	excludesfile = /Users/tekm/.gitignore_global
 	attributesfile = ~/.gitattributes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
     #whitespace = space-before-tab,indent-with-non-tab,trailing-space
@@ -84,13 +84,13 @@
 
 #    l          = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s #%Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --tags --#remotes -n15
 #   lf         = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s #%Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all --full-history -n15
-#    ff         = merge --ff-only 
+#    ff         = merge --ff-only
 #    reflogtree = "!git lf `git reflog | cut -c1-7`"
 #
-#    
+#
 #[difftool "sourcetree"]
 #	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-#	path = 
+#	path =
 #[mergetool "sourcetree"]
 #	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 #	trustExitCode = true
@@ -116,3 +116,5 @@
 	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [diff]
 	tool = diffmerge
+[http]
+  sslCAInfo = /Users/tekm/certs/merged.pem
