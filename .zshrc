@@ -56,10 +56,12 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="tekm"
 
 export MAVEN_HOME="/Users/tekm/projects/apache-maven-3.3.9"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
 export PATH="$PATH:$MAVEN_HOME/bin"
 export PATH="$HOME/.node/bin:$PATH"
 export PATH="$PATH:/sw/bin:/sw/sbin:/usr/local/arcanist/bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
+
+export PATH="$PATH:/usr/local/Cellar/node/7.8.0/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
