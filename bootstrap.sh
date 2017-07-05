@@ -47,5 +47,6 @@ source ~/.zsh_profile
 
 # Set up Dein for VIM
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.vim/bundle
+mkdir ~/.vim/bundles
+sh ./installer.sh ~/.vim/bundles
 rm -f ./installer.sh
