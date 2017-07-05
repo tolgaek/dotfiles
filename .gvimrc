@@ -4,3 +4,6 @@ colorscheme solarized
 set guifont=Powerline\ Consolas:h12
 " Better line-height
 " set guifont=Monaco:h12
+"
+  noremap <C-}> :tabnext<CR>
+  noremap <C-{> :tabprev<CR>
