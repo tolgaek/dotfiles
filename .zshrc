@@ -89,8 +89,12 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin
 
-export NVM_DIR="/Users/tekmen/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # YARN
 #export PATH="$PATH:`yarn global bin`"
+
+export NVM_DIR="/Users/tekm/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# ANDROID
+export ANDROID_HOME="/Users/tekm/Library/Android/sdk"
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
