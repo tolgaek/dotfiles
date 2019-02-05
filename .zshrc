@@ -98,3 +98,5 @@ export NVM_DIR="/Users/tekm/.nvm"
 # ANDROID
 export ANDROID_HOME="/Users/tekm/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+
+export LESS=-Ri
